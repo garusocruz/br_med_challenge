@@ -1,0 +1,4 @@
+[virtualenvs]
+in-project = false
+path = ".cache/virtualenvs"
+create = false
