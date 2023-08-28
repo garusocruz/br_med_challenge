@@ -29,3 +29,10 @@
 ```bash
     pip install poetry
 ```
+---
+
+> Start br_med_db database
+
+```bash
+    docker compose up -d
+```
