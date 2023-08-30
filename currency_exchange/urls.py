@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from exchange_rates.infra.views.rates_view import RatesView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("rates/", RatesView.as_view(), name="payment_tokens"),
 ]
