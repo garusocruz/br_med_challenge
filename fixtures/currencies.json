@@ -1,0 +1,46 @@
+[
+{
+    "model": "exchange_rates.currency",
+    "pk": 1,
+    "fields": {
+        "created": "2023-08-29T13:26:07.637Z",
+        "updated": "2023-08-29T13:26:07.637Z",
+        "name": "Euro",
+        "short_name": "EUR",
+        "symbol": "€"
+    }
+},
+{
+    "model": "exchange_rates.currency",
+    "pk": 2,
+    "fields": {
+        "created": "2023-08-29T13:26:19.695Z",
+        "updated": "2023-08-29T13:26:19.695Z",
+        "name": "US Dollar",
+        "short_name": "USD",
+        "symbol": "$"
+    }
+},
+{
+    "model": "exchange_rates.currency",
+    "pk": 3,
+    "fields": {
+        "created": "2023-08-29T13:26:33.249Z",
+        "updated": "2023-08-29T13:26:33.249Z",
+        "name": "Japanese Yen",
+        "short_name": "JPY",
+        "symbol": "¥"
+    }
+},
+{
+    "model": "exchange_rates.currency",
+    "pk": 4,
+    "fields": {
+        "created": "2023-08-29T13:26:53.630Z",
+        "updated": "2023-08-29T13:26:53.630Z",
+        "name": "Brazilian Real",
+        "short_name": "BRL",
+        "symbol": "R$"
+    }
+}
+]
