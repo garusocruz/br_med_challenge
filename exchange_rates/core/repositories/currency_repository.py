@@ -22,11 +22,11 @@ class CurrencyRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_currency_by_short_name(self, name: str) -> CurrencyEntity:
+    def get_currency_by_short_name(self, short_name: str) -> CurrencyEntity:
         """Retrieve a currency entity using its short name.
 
         Args:
-            name (str): The short name or code of the currency.
+            short_name (str): The short short_name or code of the currency.
 
         Returns:
             CurrencyEntity: The corresponding currency entity.
