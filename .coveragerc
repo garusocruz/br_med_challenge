@@ -1,0 +1,27 @@
+[run]
+branch = True
+omit =
+    exchange_rates/migrations*
+    *__init__*
+    *sh
+    *test*
+    *admin.py*
+    *wsgi.py*
+    *urls.py*
+    *settings.py*
+    *asgi.py*
+    *apps.py*
+    *models*
+    *manage.py*
+    *currency_repository.py*
+    *rate_repository.py*
+    *base.py*
+source = .
+
+[report]
+fail_under = 70
+ignore_errors = False
+show_missing = True
+
+[html]
+directory = coverage
