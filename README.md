@@ -1,34 +1,45 @@
 # br_med_challenge
 
-> Create a virtualenv
+> Build a Docker containers
 
 ```bash
-    python -m venv .venv
+    docker compose build --no-cache
 ```
 
 ---
 
-> Load a virtualenv
+> Load a Currency Fixture
 
 ```bash
-    source .venv/bin/activate
+    docker compose up -d brmed_database && docker compose run --rm brmed_api bash -c "
+    python manage.py loaddata fixtures/currencies.json"
+```
+
+or
+
+```bash
+    sudo docker compose up -d brmed_database && sudo docker compose run --rm brmed_api bash -c "
+    python manage.py loaddata fixtures/currencies.json"
 ```
 
 ---
 
-> Update pip
+> Run a project
 
 ```bash
-    pip install --upgrade pip
+    docker compose up
 ```
 
 ---
-
-> Install poetry
-
+## To use example bellow you needs to have your server running at localhost:8000
+> To access the Api see the examples bellow:
+- [get rate by date](http://127.0.0.1:8000/rates/?date=2023-03-18)
+- [get rate by date range](http://127.0.0.1:8000/rates/?date=2023-03-18&until_date=2023-03-23)
+- [get all rates on DB](http://127.0.0.1:8000/rates)
 ```bash
     pip install poetry
 ```
+
 ---
 
 > Start br_med_db database
