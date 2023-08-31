@@ -1,61 +1,38 @@
 {
-  "name": "highcharts-react-official",
-  "version": "3.3.0",
-  "main": "./dist/highcharts-react.min.js",
-  "types": "./dist/highcharts-react.min.d.ts",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/highcharts/highcharts-react"
-  },
-  "keywords": [
-    "highcharts",
-    "highstock",
-    "highmaps",
-    "react"
-  ],
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "build-demo": "browserify ./demo/demo.jsx -o ./demo/bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ]",
-    "build": "webpack --config webpack.config.js",
-    "release": "standard-version"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./tests/setupTests.js"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "peerDependencies": {
-    "highcharts": ">=6.0.0",
-    "react": ">=16.8.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test && npm run build"
-    }
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-select": "^1.2.2",
+    "@radix-ui/react-toggle-group": "^1.0.4",
+    "axios": "^1.4.0",
+    "highcharts": "^11.1.0",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
-    "babelify": "^10.0.0",
-    "browserify": "^14.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.18.3",
-    "highcharts": ">=9.0.0",
-    "husky": "^2.4.0",
-    "jest": "^25.1.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-test-renderer": "^16.9.0",
-    "standard": "^10.0.2",
-    "standard-version": "^8.0.1",
-    "webpack": "^3.12.0"
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react": "^4.0.1",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
   }
 }
