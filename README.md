@@ -24,6 +24,22 @@ or
 
 ---
 
+> Run backend tests
+
+```bash
+    docker compose up -d brmed_database && docker compose run --rm brmed_api bash -c "
+    coverage run -m pytest -s && coverage report"
+```
+
+or
+
+```bash
+    sudo docker compose up -d brmed_database && sudo docker compose run --rm brmed_api bash -c "
+    coverage run -m pytest -s && coverage report"
+```
+
+---
+
 > Run a project
 
 ```bash
@@ -31,11 +47,15 @@ or
 ```
 
 ---
+
 ## To use example bellow you needs to have your server running at localhost:8000
+
 > To access the Api see the examples bellow:
+
 - [get rate by date](http://127.0.0.1:8000/rates/?date=2023-03-18)
 - [get rate by date range](http://127.0.0.1:8000/rates/?date=2023-03-18&until_date=2023-03-23)
 - [get all rates on DB](http://127.0.0.1:8000/rates)
+
 ```bash
     pip install poetry
 ```
@@ -47,3 +67,21 @@ or
 ```bash
     docker compose up -d
 ```
+
+---
+
+> Front End app
+>
+> > Install react packages
+> >
+> > > ```bash
+> > >    npm install
+> > > ```
+> >
+> > ---
+> >
+> > Run Front end app
+> >
+> > > ```bash
+> > >    npm run dev
+> > > ```
