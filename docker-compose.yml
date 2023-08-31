@@ -1,6 +1,18 @@
 version: "3.9"
 
 services:
+  brmed_api:
+    build:
+      context: .
+    container_name: brmed_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - brmed_database
+    tty: true
+    volumes:
+      - .:/app
+
   brmed_database:
     image: postgres
     container_name: ${CONTAINER_NAME}
